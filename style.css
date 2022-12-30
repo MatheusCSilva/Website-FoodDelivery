@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
 :root {
     --red: #ff3838;
@@ -168,7 +168,7 @@ header .navbar a:hover {
 .home .content h3 {
     font-size: 5rem;
     color: #333;
-    padding: 1rem 0;
+
 }
 
 .home .content p {
@@ -207,10 +207,13 @@ header .navbar a:hover {
     text-align: center;
     background-color: #fff;
     padding: 2rem;
+    height: 100%;
+    width: 100%
 }
 
 .speciality .box-container .box .content img {
     margin: 1.5rem 0;
+
 }
 
 .speciality .box-container .box .content h3 {
@@ -248,6 +251,17 @@ header .navbar a:hover {
     text-align: center;
     flex: 1 1 30rem;
     position: relative;
+}
+
+.popular .box-container .box .price {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    background: var(--red);
+    color: #fff;
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
 }
 
 .popular .box-container .box img {
@@ -482,23 +496,33 @@ header .navbar a:hover {
 
 #scroll-top {
     position: fixed;
-    top: -120%;
+    top: calc(100% - 12rem);
     right: 2rem;
     padding: .5rem 1rem;
-    font-size: 4rem;
+    font-size: 3rem;
     background: var(--red);
     color: #fff;
     border-radius: .5rem;
-    transition: 1s linear;
-    z-index: 1000;
 }
 
-#scroll-top.active {
-    top: calc(100% -12rem);
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 
 }
 
+.loader-container.fade-out {
+    top: -120%;
 
+}
 
 
 
